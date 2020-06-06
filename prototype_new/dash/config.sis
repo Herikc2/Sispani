@@ -1,0 +1,26 @@
+# Arquivo de configuração Sispani.
+# Atenção! Não altere esse arquivo.
+
+<empresa
+	nomeFantasia:Panificadora Pão Doce
+	nomeJuridico:PANIFICADORA PAO DOCE LTDA
+	cnpj:00.000.000/000-00
+	ie:null
+	localizacao:BARRA VELHA - SC
+	endereco:RUA EMMANUEL VIEIRA, 26, SALA ESQUINA AV. ITAJUBA
+>
+
+<software
+	nome:Sispani
+	autores:Carlos Machado e Herikc Brecher
+	               # A versão tem três níveis de importância
+	versao:v0.3.27 # importante.significativa.correções
+>
+
+<sgbd
+    serverName:127.0.0.1 #localhost
+    port:5432            #porta default
+    userName:postgres    #nome do administrador
+    password:123456	 	 #senha do administrador
+    databaseName:sispani #nome do banco de dados
+>
