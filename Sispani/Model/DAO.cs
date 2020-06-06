@@ -27,15 +27,19 @@ namespace Sispani.Controller
             if (_first_start.Equals("false"))
             {
                 // TODO: SUBSTITUIR FIRST_START:FALSE POR TRUE
-                file.DeleteAll();
+                //file.DeleteAll();
 
-                file.AddSection(new Section("sgbd"));
-                file.AddData("sgbd", new Data("serverName", _serverName));
-                file.AddData("sgbd", new Data("port", _port));
-                file.AddData("sgbd", new Data("username", _userName));
-                file.AddData("sgbd", new Data("password", _password));
-                file.AddData("sgbd", new Data("databaseName", _databaseName));
-                file.AddData("sgbd", new Data("first_start", "true"));
+                //file.AddSection(new Section("sgbd"));
+                //file.AddData("sgbd", new Data("serverName", _serverName));
+                //file.AddData("sgbd", new Data("port", _port));
+                //file.AddData("sgbd", new Data("username", _userName));
+                //file.AddData("sgbd", new Data("password", _password));
+                //file.AddData("sgbd", new Data("databaseName", _databaseName));
+                //file.AddData("sgbd", new Data("first_start", "true"));
+
+
+                file.FindData("sgbd", "first_start").Value = "true";
+
                 BPSWriter.Write(file, "config");
 
                 FirstStart fs_s = new FirstStart();
