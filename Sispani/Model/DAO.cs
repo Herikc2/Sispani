@@ -30,18 +30,16 @@ namespace Sispani.Controller
             {
                 try
                 {
-                    MessageBox.Show("Devido ao Banco de Dados não estar conectando, irá ser forçado uma tentativa de conexão!\nEssa tentativa pode demorar até 5 segundos para aparecer o Login.", "Tempo de Espera",
+                    MessageBox.Show("Devido ao Banco de Dados não estar conectando, irá ser forçado uma tentativa de conexão!\nEssa tentativa pode demorar de 5 a 10 segundos para aparecer o Login.", "Tempo de Espera",
                     MessageBoxButton.OK, MessageBoxImage.Warning);
 
                     string path_appdata = System.Environment.GetEnvironmentVariable("APPDATA");
 
                     System.Diagnostics.Process.Start("\"" + path_appdata + "/Microsoft/windows/start menu/programs/startup/start_pg.vbs\"");
-                    System.Threading.Thread.Sleep(4250);
+                    System.Threading.Thread.Sleep(5000);
 
                     ConnString = string.Format("Server={0};Port={1};User Id={2};Password={3};Database={4};",
                                                             _serverName, _port, _userName, _password, _databaseName);
-
-                    script_start();
                 }
                 catch (Exception)
                 {
@@ -50,6 +48,8 @@ namespace Sispani.Controller
                 }
                 
             }
+
+            script_start();
         }
 
         public static bool ConnectDAO(string _ServerName, string _Port, string _UserName, string _Password, string _DatabaseName)
