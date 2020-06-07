@@ -1,6 +1,7 @@
 ﻿using BPS;
 using Npgsql;
 using Sispani.Model;
+using System;
 using System.Windows;
 
 namespace Sispani.Controller
@@ -24,6 +25,27 @@ namespace Sispani.Controller
             if(debug)
                 ConnString = string.Format("Server={0};Port={1};User Id={2};Password={3};Database={4};",
                                                         _serverName, _port, _userName, _password, _databaseName);
+
+            if (!TestConnection())
+            {
+                try
+                {
+                    string path_appdata = System.Environment.GetEnvironmentVariable("APPDATA");
+
+                    System.Diagnostics.Process.Start("\"" + path_appdata + "/Microsoft/windows/start menu/programs/startup/start_pg.vbs\"");
+                    System.Threading.Thread.Sleep(3000);
+
+                    ConnString = string.Format("Server={0};Port={1};User Id={2};Password={3};Database={4};",
+                                                            _serverName, _port, _userName, _password, _databaseName);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Erro: Não foi possivel realizar conexão com o banco de dados", "Erro de Banco de Dados",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+                
+            }
+
             if (_first_start.Equals("false"))
             {
                 // TODO: SUBSTITUIR FIRST_START:FALSE POR TRUE
@@ -45,6 +67,7 @@ namespace Sispani.Controller
                 FirstStart fs_s = new FirstStart();
                 fs_s.start_script();
             }
+
         }
 
         public static bool ConnectDAO(string _ServerName, string _Port, string _UserName, string _Password, string _DatabaseName)
@@ -69,14 +92,12 @@ namespace Sispani.Controller
             }
             catch (NpgsqlException ex)
             {
-                MessageBox.Show("Erro: " + ex.Message + ".\nPor Favor contate o suporte.", "Erro de Banco de Dados",
-                    MessageBoxButton.OK, MessageBoxImage.Error);
+                return false;
             }
             finally
             {
                 PgsqlConnection.Close();
             }
-            return false;
         }
     }
 }
