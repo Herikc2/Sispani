@@ -33,10 +33,12 @@ namespace Sispani.Controller
                     string path_appdata = System.Environment.GetEnvironmentVariable("APPDATA");
 
                     System.Diagnostics.Process.Start("\"" + path_appdata + "/Microsoft/windows/start menu/programs/startup/start_pg.vbs\"");
-                    System.Threading.Thread.Sleep(3000);
+                    System.Threading.Thread.Sleep(4250);
 
                     ConnString = string.Format("Server={0};Port={1};User Id={2};Password={3};Database={4};",
                                                             _serverName, _port, _userName, _password, _databaseName);
+
+                    script_start();
                 }
                 catch (Exception)
                 {
@@ -45,29 +47,6 @@ namespace Sispani.Controller
                 }
                 
             }
-
-            if (_first_start.Equals("false"))
-            {
-                // TODO: SUBSTITUIR FIRST_START:FALSE POR TRUE
-                //file.DeleteAll();
-
-                //file.AddSection(new Section("sgbd"));
-                //file.AddData("sgbd", new Data("serverName", _serverName));
-                //file.AddData("sgbd", new Data("port", _port));
-                //file.AddData("sgbd", new Data("username", _userName));
-                //file.AddData("sgbd", new Data("password", _password));
-                //file.AddData("sgbd", new Data("databaseName", _databaseName));
-                //file.AddData("sgbd", new Data("first_start", "true"));
-
-
-                file.FindData("sgbd", "first_start").Value = "true";
-
-                BPSWriter.Write(file, "config");
-
-                FirstStart fs_s = new FirstStart();
-                fs_s.start_script();
-            }
-
         }
 
         public static bool ConnectDAO(string _ServerName, string _Port, string _UserName, string _Password, string _DatabaseName)
@@ -97,6 +76,31 @@ namespace Sispani.Controller
             finally
             {
                 PgsqlConnection.Close();
+            }
+        }
+
+        private static void script_start()
+        {
+            if (_first_start.Equals("false"))
+            {
+                // TODO: SUBSTITUIR FIRST_START:FALSE POR TRUE
+                //file.DeleteAll();
+
+                //file.AddSection(new Section("sgbd"));
+                //file.AddData("sgbd", new Data("serverName", _serverName));
+                //file.AddData("sgbd", new Data("port", _port));
+                //file.AddData("sgbd", new Data("username", _userName));
+                //file.AddData("sgbd", new Data("password", _password));
+                //file.AddData("sgbd", new Data("databaseName", _databaseName));
+                //file.AddData("sgbd", new Data("first_start", "true"));
+
+
+                file.FindData("sgbd", "first_start").Value = "true";
+
+                BPSWriter.Write(file, "config");
+
+                FirstStart fs_s = new FirstStart();
+                fs_s.start_script();
             }
         }
     }
