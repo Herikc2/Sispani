@@ -30,6 +30,9 @@ namespace Sispani.Controller
             {
                 try
                 {
+                    MessageBox.Show("Devido ao Banco de Dados não estar conectando, irá ser forçado uma tentativa de conexão!\nEssa tentativa pode demorar até 5 segundos para aparecer o Login.", "Tempo de Espera",
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
+
                     string path_appdata = System.Environment.GetEnvironmentVariable("APPDATA");
 
                     System.Diagnostics.Process.Start("\"" + path_appdata + "/Microsoft/windows/start menu/programs/startup/start_pg.vbs\"");
