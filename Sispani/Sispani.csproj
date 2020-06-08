@@ -97,6 +97,7 @@
     <Compile Include="Model\Class\User.cs" />
     <Compile Include="Model\Class\SaleItem.cs" />
     <Compile Include="Model\Class\Validations\ValidationItem.cs" />
+    <Compile Include="Model\Cryptography.cs" />
     <Compile Include="Model\CustomerDAO.cs" />
     <Compile Include="Model\DAO.cs" />
     <Compile Include="Controller\CustomerController.cs" />

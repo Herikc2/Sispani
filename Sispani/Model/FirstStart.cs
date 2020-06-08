@@ -27,7 +27,7 @@ namespace Sispani.Model
                     }
 
                     CMD = string.Format("select * from inserir_usuario('{0}','{1}','{2}')",
-                        DAO._userName, DAO._password, "Admin");
+                        DAO._first_user, DAO._password, "Admin");
 
                     using (NpgsqlCommand pgsqlcommand = new NpgsqlCommand(CMD, DAO.PgsqlConnection))
                     {

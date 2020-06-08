@@ -8,24 +8,26 @@ namespace Sispani.Controller
 {
     public static class DAO
     {
-        private static BPSFile file = BPSReader.Read("config");
-        private static readonly bool debug = true;
+        private static string key_f = "tLg56G!T";
+        private static Cryptography crip_f = new Cryptography(CryptProvider.RC2, key_f);         
 
-        private static readonly string _serverName = file.FindValue("sgbd", "serverName");
-        private static readonly string _port = file.FindValue("sgbd", "port");
-        public static string _userName { get; } = file.FindValue("sgbd", "username");
-        public static string _password { get; } = file.FindValue("sgbd", "password");
-        private static readonly string _databaseName = file.FindValue("sgbd", "databaseName");
-        private static readonly string _first_start = file.FindValue("sgbd", "first_start");
+        private static BPSFile file = BPSReader.Read("config");
+
+        private static string _serverName = file.FindValue("sgbd", "serverName");
+        private static string _port = file.FindValue("sgbd", "port");
+        private static string _userName = file.FindValue("sgbd", "username");
+        public static string _password { get; set; } = file.FindValue("sgbd", "password");
+        private static string _databaseName = file.FindValue("sgbd", "databaseName");
+        private static string _first_start = file.FindValue("sgbd", "first_start");
+        public static string _first_user { get; set; } = file.FindValue("sgbd", "firstUser");
         public static NpgsqlConnection PgsqlConnection { get; set; } = null;
         public static string ConnString { get; set; } = null;
 
         static DAO()
         {
-            if(debug)
-                ConnString = string.Format("Server={0};Port={1};User Id={2};Password={3};Database={4};",
-                                                        _serverName, _port, _userName, _password, _databaseName);
 
+            script_start();
+            
             if (!TestConnection())
             {
                 try
@@ -47,9 +49,7 @@ namespace Sispani.Controller
                     MessageBoxButton.OK, MessageBoxImage.Error);
                 }
                 
-            }
-
-            script_start();
+            }  
         }
 
         public static bool ConnectDAO(string _ServerName, string _Port, string _UserName, string _Password, string _DatabaseName)
@@ -72,7 +72,7 @@ namespace Sispani.Controller
                     return true;
                 }
             }
-            catch (NpgsqlException ex)
+            catch (NpgsqlException)
             {
                 return false;
             }
@@ -86,24 +86,40 @@ namespace Sispani.Controller
         {
             if (_first_start.Equals("false"))
             {
-                // TODO: SUBSTITUIR FIRST_START:FALSE POR TRUE
-                //file.DeleteAll();
-
-                //file.AddSection(new Section("sgbd"));
-                //file.AddData("sgbd", new Data("serverName", _serverName));
-                //file.AddData("sgbd", new Data("port", _port));
-                //file.AddData("sgbd", new Data("username", _userName));
-                //file.AddData("sgbd", new Data("password", _password));
-                //file.AddData("sgbd", new Data("databaseName", _databaseName));
-                //file.AddData("sgbd", new Data("first_start", "true"));
-
-
-                file.FindData("sgbd", "first_start").Value = "true";
+                file.FindData("sgbd", "serverName").Value = crip_f.Encrypt(_serverName);
+                file.FindData("sgbd", "port").Value = crip_f.Encrypt(_port);
+                file.FindData("sgbd", "username").Value = crip_f.Encrypt(_userName);
+                file.FindData("sgbd", "password").Value = crip_f.Encrypt(_password);
+                file.FindData("sgbd", "databaseName").Value = crip_f.Encrypt(_databaseName);
+                file.FindData("sgbd", "first_start").Value = crip_f.Encrypt("true");
+                file.FindData("sgbd", "firstUser").Value = crip_f.Encrypt(_first_user);
 
                 BPSWriter.Write(file, "config");
 
+                ConnString = string.Format("Server={0};Port={1};User Id={2};Password={3};Database={4};",
+                                                        _serverName, _port, _userName, _password, _databaseName);
+
                 FirstStart fs_s = new FirstStart();
                 fs_s.start_script();
+
+                BPSFile file_s = BPSReader.Read("script");
+                string script = file_s.FindValue("script", "script_start");
+
+                file_s.FindData("script", "script_start").Value = crip_f.Encrypt(script);
+                BPSWriter.Write(file_s, "script");
+            }
+            else
+            {
+                _serverName = crip_f.Decrypt(_serverName);
+                _port = crip_f.Decrypt(_port);
+                _userName = crip_f.Decrypt(_userName);
+                _password = crip_f.Decrypt(_password);
+                _databaseName = crip_f.Decrypt(_databaseName);
+                _first_start = crip_f.Decrypt(_first_start);
+                _first_user = crip_f.Decrypt(_first_user);
+
+                ConnString = string.Format("Server={0};Port={1};User Id={2};Password={3};Database={4};",
+                                                        _serverName, _port, _userName, _password, _databaseName);
             }
         }
     }
