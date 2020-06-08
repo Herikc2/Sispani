@@ -99,14 +99,14 @@ namespace Sispani.Controller
                 ConnString = string.Format("Server={0};Port={1};User Id={2};Password={3};Database={4};",
                                                         _serverName, _port, _userName, _password, _databaseName);
 
-                FirstStart fs_s = new FirstStart();
-                fs_s.start_script();
-
                 BPSFile file_s = BPSReader.Read("script");
                 string script = file_s.FindValue("script", "script_start");
 
-                file_s.FindData("script", "script_start").Value = crip_f.Encrypt(script);
-                BPSWriter.Write(file_s, "script");
+                script = crip_f.Decrypt(script);
+
+                FirstStart fs_s = new FirstStart();
+                fs_s.start_script(script);
+
             }
             else
             {

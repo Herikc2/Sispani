@@ -1,5 +1,4 @@
-﻿using BPS;
-using Npgsql;
+﻿using Npgsql;
 using Sispani.Controller;
 using System;
 using System.Windows;
@@ -9,7 +8,7 @@ namespace Sispani.Model
     class FirstStart
     {
 
-        public bool start_script()
+        public bool start_script(string CMD)
         {
             try
             {
@@ -17,9 +16,6 @@ namespace Sispani.Model
                 {
                     //Abra a conexão com o PgSQL                  
                     DAO.PgsqlConnection.Open();
-
-                    BPSFile file = BPSReader.Read("script");
-                    string CMD = file.FindValue("script", "script_start");
 
                     using (NpgsqlCommand pgsqlcommand = new NpgsqlCommand(CMD, DAO.PgsqlConnection))
                     {
