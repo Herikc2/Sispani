@@ -33,7 +33,7 @@ namespace Sispani.View
             lblCompanyName.Text = "Nome Jurídico";
             lblCNPJ.Text = "CNPJ " + "000.000.000/0000-00";
 
-            labelVersion.Text = "0.7.21";
+            labelVersion.Text = "1.0.0";
 
             // Carregamentos das User Control
             // enables
