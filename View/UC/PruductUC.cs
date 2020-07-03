@@ -65,7 +65,7 @@ namespace Sispani.View
         {
             if (e.KeyCode.Equals(Keys.Enter))
             {
-                Product product = ProductController.Select(txtDeleteCode.Text, ProductDAO.CONSULTA_TOTAL);
+                Product product = ProductController.Select(txtAlterCode.Text, ProductDAO.CONSULTA_TOTAL);
                 if (product != null)
                 {
                     txtAlterCode.Text = product.BarCode;

@@ -32,7 +32,7 @@ namespace Sispani.Controller
             string cmd = "";
 
             if (operacao.Equals(CONSULTA_TOTAL))
-                cmd = string.Format("select * from selecionar_produto_venda('{0}')", codigoBarras);
+                cmd = string.Format("select * from selecionar_produto('{0}')", codigoBarras);
             else if (operacao.Equals(CONSULTA_VENDA))
                 cmd = string.Format("select * from selecionar_produto_venda('{0}')", codigoBarras);
 

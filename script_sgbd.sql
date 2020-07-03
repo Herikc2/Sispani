@@ -252,8 +252,8 @@ create type select_produto as (
 	descricao varchar(255),
 	estoque int,
 	unidade varchar(5),
-	preco_custo decimal(6,2),
-	preco_venda decimal(6,2)
+	preco_custo decimal(10,3),
+	preco_venda decimal(10,3)
 );
 
 create or replace function selecionar_produto(codigo_barras_ text) returns setof select_produto as $$
@@ -880,7 +880,7 @@ REVOKE ALL PRIVILEGES ON DATABASE sispani FROM caixa;
 
 DROP USER IF EXISTS user_caixa;
 DROP ROLE IF EXISTS user_caixa;
-CREATE ROLE user_caixa LOGIN PASSWORD 'admin' IN GROUP caixa;
+CREATE ROLE user_caixa LOGIN PASSWORD '123456' IN GROUP caixa;
 REVOKE ALL PRIVILEGES ON DATABASE sispani FROM user_caixa;
 
 GRANT EXECUTE ON FUNCTION inserir_pessoa TO caixa;
