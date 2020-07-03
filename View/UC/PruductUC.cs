@@ -15,6 +15,7 @@ namespace Sispani.View
         private void ProductUC_Load(object sender, EventArgs e)
         {
             cboInsertUnity.SelectedItem = cboInsertUnity.Items[0];
+            dataGridView.DataSource = ProductController.Select();
         }
 
         private void UpdateDataGridView()
