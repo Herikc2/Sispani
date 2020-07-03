@@ -39,8 +39,9 @@
     <Reference Include="BCrypt.Net, Version=0.1.4141.31969, Culture=neutral, PublicKeyToken=f3bc8f8c31beeb49, processorArchitecture=MSIL">
       <HintPath>..\packages\BCrypt.Net.0.1.0\lib\net35\BCrypt.Net.dll</HintPath>
     </Reference>
-    <Reference Include="BPS">
-      <HintPath>..\dll\BPS\netstandard2.0\BPS.dll</HintPath>
+    <Reference Include="BPS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>BPS\netstandard2.0\BPS.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
@@ -88,39 +89,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\BillController.cs" />
-    <Compile Include="Model\BillDAO.cs" />
-    <Compile Include="Model\BillPaymentDAO.cs" />
-    <Compile Include="Model\Class\BillItem.cs" />
-    <Compile Include="Model\Class\BillPayment.cs" />
-    <Compile Include="Model\Class\Revenue.cs" />
-    <Compile Include="Model\Class\User.cs" />
-    <Compile Include="Model\Class\SaleItem.cs" />
-    <Compile Include="Model\Class\Validations\ValidationItem.cs" />
-    <Compile Include="Model\Cryptography.cs" />
-    <Compile Include="Model\CustomerDAO.cs" />
-    <Compile Include="Model\DAO.cs" />
+    <Compile Include="Model\DAO\BillPaymentDAO.cs" />
+    <Compile Include="Model\BillItem.cs" />
+    <Compile Include="Model\BillPayment.cs" />
+    <Compile Include="Model\Revenue.cs" />
+    <Compile Include="Model\User.cs" />
+    <Compile Include="Model\SaleItem.cs" />
+    <Compile Include="Model\Util\Validations\ValidationItem.cs" />
+    <Compile Include="Model\Util\Cryptography.cs" />
+    <Compile Include="Model\DAO\CustomerDAO.cs" />
+    <Compile Include="Model\DAO\DAO.cs" />
     <Compile Include="Controller\CustomerController.cs" />
     <Compile Include="Controller\ProductController.cs" />
     <Compile Include="Controller\ReportController.cs" />
     <Compile Include="Controller\SaleController.cs" />
-    <Compile Include="Model\FirstStart.cs" />
-    <Compile Include="Model\GenericDAO.cs" />
-    <Compile Include="Model\UserDAO.cs" />
-    <Compile Include="Model\LoginDAO.cs" />
-    <Compile Include="Model\ProductDAO.cs" />
-    <Compile Include="Model\ReportDAO.cs" />
-    <Compile Include="Model\SaleDAO.cs" />
-    <Compile Include="Model\Class\Customer.cs" />
-    <Compile Include="Model\Class\Bill.cs" />
-    <Compile Include="Model\Class\Address.cs" />
-    <Compile Include="Model\Class\Validations\Message.cs" />
-    <Compile Include="Model\Class\Product.cs" />
-    <Compile Include="Model\Class\Report.cs" />
-    <Compile Include="Model\Class\Test.cs" />
-    <Compile Include="Model\Class\Validations\Validations.cs" />
-    <Compile Include="Model\Class\Sale.cs" />
-    <Compile Include="Model\SalelItemDAO.cs" />
+    <Compile Include="Model\DAO\FirstStart.cs" />
+    <Compile Include="Model\DAO\GenericDAO.cs" />
+    <Compile Include="Model\DAO\UserDAO.cs" />
+    <Compile Include="Model\DAO\LoginDAO.cs" />
+    <Compile Include="Model\DAO\ProductDAO.cs" />
+    <Compile Include="Model\DAO\ReportDAO.cs" />
+    <Compile Include="Model\DAO\SaleDAO.cs" />
+    <Compile Include="Model\Customer.cs" />
+    <Compile Include="Model\Bill.cs" />
+    <Compile Include="Model\Address.cs" />
+    <Compile Include="Model\Util\Validations\Message.cs" />
+    <Compile Include="Model\Product.cs" />
+    <Compile Include="Model\Report.cs" />
+    <Compile Include="Model\Util\Test.cs" />
+    <Compile Include="Model\Util\Validations\Validations.cs" />
+    <Compile Include="Model\Sale.cs" />
+    <Compile Include="Model\DAO\SalelItemDAO.cs" />
     <Compile Include="View\AuxBill\PaymentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,12 +149,6 @@
     </Compile>
     <Compile Include="View\AuxSale\AddCustomerForm.Designer.cs">
       <DependentUpon>AddCustomerForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\AuxProgram\DataSearchForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\AuxProgram\DataSearchForm.Designer.cs">
-      <DependentUpon>DataSearchForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\AuxSale\DiscountForm.cs">
       <SubType>Form</SubType>
@@ -213,11 +206,11 @@
     <Compile Include="View\UC\MainUC.Designer.cs">
       <DependentUpon>MainUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\UC\PruductUC.cs">
+    <Compile Include="View\UC\ProductUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\UC\PruductUC.Designer.cs">
-      <DependentUpon>PruductUC.cs</DependentUpon>
+    <Compile Include="View\UC\ProductUC.Designer.cs">
+      <DependentUpon>ProductUC.cs</DependentUpon>
     </Compile>
     <Compile Include="View\UC\ReportUC.cs">
       <SubType>UserControl</SubType>
@@ -239,9 +232,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\AuxSale\AddCustomerForm.resx">
       <DependentUpon>AddCustomerForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\AuxProgram\DataSearchForm.resx">
-      <DependentUpon>DataSearchForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\AuxSale\DiscountForm.resx">
       <DependentUpon>DiscountForm.cs</DependentUpon>
@@ -280,8 +270,8 @@
     <EmbeddedResource Include="View\UC\MainUC.resx">
       <DependentUpon>MainUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\UC\PruductUC.resx">
-      <DependentUpon>PruductUC.cs</DependentUpon>
+    <EmbeddedResource Include="View\UC\ProductUC.resx">
+      <DependentUpon>ProductUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UC\ReportUC.resx">
       <DependentUpon>ReportUC.cs</DependentUpon>

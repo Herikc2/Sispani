@@ -1,12 +1,11 @@
 ﻿using Sispani.Controller;
 using Sispani.Model;
-using Sispani.Model.Class;
 using Sispani.View.AuxBill;
 using System;
 using System.Data;
 using System.Windows.Forms;
 
-namespace Sispani.View
+namespace Sispani.View.UC
 {
     public partial class BillUC : UserControl
     {

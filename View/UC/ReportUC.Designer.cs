@@ -1,4 +1,4 @@
-﻿namespace Sispani.View
+﻿namespace Sispani.View.UC
 {
     partial class ReportUC
     {
@@ -71,8 +71,8 @@
             // 
             // chtLastMonthSale
             // 
-            this.chtLastMonthSale.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.chtLastMonthSale.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             chartArea1.Name = "ChartArea1";
             this.chtLastMonthSale.ChartAreas.Add(chartArea1);
@@ -90,8 +90,8 @@
             // 
             // gbcReportSales
             // 
-            this.gbcReportSales.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.gbcReportSales.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbcReportSales.BackColor = System.Drawing.Color.White;
             this.gbcReportSales.Controls.Add(this.chtLastMonthSale);
@@ -104,7 +104,7 @@
             // 
             // groupBoxPesquisa
             // 
-            this.groupBoxPesquisa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.groupBoxPesquisa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBoxPesquisa.BackColor = System.Drawing.Color.White;
             this.groupBoxPesquisa.Controls.Add(this.groupBoxDados);
@@ -118,8 +118,8 @@
             // 
             // groupBoxDados
             // 
-            this.groupBoxDados.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.groupBoxDados.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxDados.Controls.Add(this.groupBox3);
             this.groupBoxDados.Controls.Add(this.groupBox1);
@@ -269,7 +269,7 @@
             // 
             // groupBoxPeriodo
             // 
-            this.groupBoxPeriodo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.groupBoxPeriodo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxPeriodo.Controls.Add(this.labelAte);
             this.groupBoxPeriodo.Controls.Add(this.dtpStart);

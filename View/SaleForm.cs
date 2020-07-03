@@ -1,5 +1,6 @@
 ﻿using Sispani.Controller;
 using Sispani.Model;
+using Sispani.Model.DAO;
 using Sispani.View.AuxSale;
 using System;
 using System.Data;
@@ -218,8 +219,8 @@ namespace Sispani.View
                 {
                     DataRow cols = _source.NewRow();
                     cols[ITEM_NUMBER] = _source.Rows.Count;
-                    cols[CODE] = product.BarCode;
-                    cols[DESCRIPTION] = product.Description;
+                    cols[CODE] = product.Code;
+                    cols[DESCRIPTION] = product.Name;
                     cols[AMOUNT] = txtAmount.Text;
                     cols[UNITY] = product.Unity;
                     cols[UN_VALUE] = product.SalePrice.ToString("N2");

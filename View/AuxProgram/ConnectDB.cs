@@ -1,7 +1,7 @@
-﻿using Sispani.Controller;
+﻿using Sispani.Model.DAO;
 using System;
-using System.Windows.Forms;
 using System.Windows;
+using System.Windows.Forms;
 
 namespace Sispani.View.AuxProgram
 {
@@ -12,7 +12,7 @@ namespace Sispani.View.AuxProgram
             InitializeComponent();
         }
 
-        private void btnConfirm_Click(object sender, EventArgs e)
+        private void Confirm_Click(object sender, EventArgs e)
         {
             if(DAO.ConnectDAO(textServerName.Text, textPort.Text, textUser.Text, textPassword.Text, textNameDB.Text))
             {

@@ -1,8 +1,8 @@
 ﻿using Sispani.Model;
-using Sispani.Model.Class;
+using Sispani.Model.DAO;
 using System;
-using System.Windows.Forms;
 using System.Windows;
+using System.Windows.Forms;
 
 namespace Sispani.View.AuxProgram
 {

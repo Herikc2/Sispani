@@ -1,4 +1,5 @@
 ﻿using Sispani.Model;
+using Sispani.Model.DAO;
 using System;
 using System.Data;
 using System.IO;
@@ -8,7 +9,6 @@ namespace Sispani.Controller
 {
     public class CustomerController
     {
-
         public static DataTable Select()
         {
             return CustomerDAO.Select();

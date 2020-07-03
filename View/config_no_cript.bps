@@ -1,0 +1,11 @@
+# BPS File
+
+<sgbd
+    serverName:127.0.0.1
+    port:5432
+    username:user_caixa
+	firstUser:postgres
+    password:123456
+    databaseName:sispani
+    first_start:false
+>

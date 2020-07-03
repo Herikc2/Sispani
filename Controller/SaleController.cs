@@ -1,5 +1,5 @@
 ﻿using Sispani.Model;
-using Sispani.Model.Class;
+using Sispani.Model.DAO;
 using System;
 using System.Collections.Generic;
 using System.Data;

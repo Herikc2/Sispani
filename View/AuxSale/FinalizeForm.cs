@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace Sispani.View
+namespace Sispani.View.AuxSale
 {
     public partial class FinalizeForm : Form
     {

@@ -38,12 +38,12 @@
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.labelVersion = new System.Windows.Forms.Label();
             this.Wrapper = new System.Windows.Forms.Panel();
-            this.ucMain = new Sispani.View.MainUC();
-            this.ucHelp = new Sispani.View.HelpUC();
-            this.ucCustomer = new Sispani.View.CustomerUC();
-            this.ucProduct = new Sispani.View.ProductUC();
-            this.ucReport = new Sispani.View.ReportUC();
-            this.ucBill = new Sispani.View.BillUC();
+            this.ucMain = new Sispani.View.UC.MainUC();
+            this.ucHelp = new Sispani.View.UC.HelpUC();
+            this.ucCustomer = new Sispani.View.UC.CustomerUC();
+            this.ucProduct = new Sispani.View.UC.ProductUC();
+            this.ucReport = new Sispani.View.UC.ReportUC();
+            this.ucBill = new Sispani.View.UC.BillUC();
             this.SideBarMenu = new System.Windows.Forms.Panel();
             this.buttonContaCliente = new System.Windows.Forms.Button();
             this.pictureBoxLogoNome = new System.Windows.Forms.PictureBox();
@@ -445,14 +445,14 @@
         private System.Windows.Forms.Label lblCNPJ;
         private System.Windows.Forms.Panel panelEmpresa;
         private System.Windows.Forms.Label lblCompanyName;
-        private HelpUC ucHelp;
-        private CustomerUC ucCustomer;
-        private ProductUC ucProduct;
-        private ReportUC ucReport;
-        private MainUC ucMain;
+        private UC.HelpUC ucHelp;
+        private UC.CustomerUC ucCustomer;
+        private UC.ProductUC ucProduct;
+        private UC.ReportUC ucReport;
+        private UC.MainUC ucMain;
         private System.Windows.Forms.PictureBox pictureBoxLogoNome;
         private System.Windows.Forms.Button buttonContaCliente;
-        private BillUC ucBill;
+        private UC.BillUC ucBill;
     }
 }
 

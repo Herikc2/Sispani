@@ -1,4 +1,4 @@
-﻿namespace Sispani.View
+﻿namespace Sispani.View.AuxSale
 {
     partial class FinalizeForm
     {

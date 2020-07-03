@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
-namespace Sispani.View
+namespace Sispani.View.UC
 {
     public partial class ReportUC : UserControl
     {

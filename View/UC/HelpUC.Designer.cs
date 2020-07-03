@@ -1,4 +1,4 @@
-﻿namespace Sispani.View
+﻿namespace Sispani.View.UC
 {
     partial class HelpUC
     {
@@ -30,54 +30,54 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HelpUC));
             this.groupBoxSobre = new System.Windows.Forms.GroupBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
             this.pictureBoxLogoNome = new System.Windows.Forms.PictureBox();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.labelViersao = new System.Windows.Forms.Label();
             this.tabControlAssistencia = new System.Windows.Forms.TabControl();
             this.tabPageVenda = new System.Windows.Forms.TabPage();
             this.tabPageProduto = new System.Windows.Forms.TabPage();
-            this.tabPageCliente = new System.Windows.Forms.TabPage();
-            this.tabPageRelatorio = new System.Windows.Forms.TabPage();
-            this.groupBoxAjuda = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBoxAssistencia = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.tabPageCliente = new System.Windows.Forms.TabPage();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
+            this.tabPageRelatorio = new System.Windows.Forms.TabPage();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
+            this.groupBoxAjuda = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBoxAssistencia = new System.Windows.Forms.GroupBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label33 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBoxSobre.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogoNome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
@@ -88,15 +88,15 @@
             this.tabPageRelatorio.SuspendLayout();
             this.groupBoxAjuda.SuspendLayout();
             this.groupBoxAssistencia.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBoxSobre
             // 
-            this.groupBoxSobre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.groupBoxSobre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxSobre.Controls.Add(this.label27);
             this.groupBoxSobre.Controls.Add(this.label26);
@@ -110,9 +110,27 @@
             this.groupBoxSobre.TabStop = false;
             this.groupBoxSobre.Text = "Sobre";
             // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(19, 324);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(228, 156);
+            this.label27.TabIndex = 29;
+            this.label27.Text = resources.GetString("label27.Text");
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(19, 163);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(228, 156);
+            this.label26.TabIndex = 28;
+            this.label26.Text = resources.GetString("label26.Text");
+            // 
             // pictureBoxLogoNome
             // 
-            this.pictureBoxLogoNome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.pictureBoxLogoNome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBoxLogoNome.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogoNome.BackgroundImage")));
             this.pictureBoxLogoNome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -128,7 +146,7 @@
             // 
             // pictureBoxLogo
             // 
-            this.pictureBoxLogo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.pictureBoxLogo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBoxLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.BackgroundImage")));
             this.pictureBoxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -155,8 +173,8 @@
             // 
             // tabControlAssistencia
             // 
-            this.tabControlAssistencia.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.tabControlAssistencia.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControlAssistencia.Controls.Add(this.tabPageVenda);
             this.tabControlAssistencia.Controls.Add(this.tabPageProduto);
@@ -197,138 +215,6 @@
             this.tabPageProduto.TabIndex = 2;
             this.tabPageProduto.Text = "Produto";
             this.tabPageProduto.UseVisualStyleBackColor = true;
-            // 
-            // tabPageCliente
-            // 
-            this.tabPageCliente.Controls.Add(this.label14);
-            this.tabPageCliente.Controls.Add(this.label15);
-            this.tabPageCliente.Controls.Add(this.label16);
-            this.tabPageCliente.Controls.Add(this.label17);
-            this.tabPageCliente.Controls.Add(this.label18);
-            this.tabPageCliente.Controls.Add(this.label19);
-            this.tabPageCliente.Location = new System.Drawing.Point(4, 22);
-            this.tabPageCliente.Name = "tabPageCliente";
-            this.tabPageCliente.Size = new System.Drawing.Size(597, 539);
-            this.tabPageCliente.TabIndex = 1;
-            this.tabPageCliente.Text = "Cliente";
-            this.tabPageCliente.UseVisualStyleBackColor = true;
-            // 
-            // tabPageRelatorio
-            // 
-            this.tabPageRelatorio.Controls.Add(this.label20);
-            this.tabPageRelatorio.Controls.Add(this.label21);
-            this.tabPageRelatorio.Controls.Add(this.label22);
-            this.tabPageRelatorio.Controls.Add(this.label23);
-            this.tabPageRelatorio.Controls.Add(this.label24);
-            this.tabPageRelatorio.Controls.Add(this.label25);
-            this.tabPageRelatorio.Location = new System.Drawing.Point(4, 22);
-            this.tabPageRelatorio.Name = "tabPageRelatorio";
-            this.tabPageRelatorio.Size = new System.Drawing.Size(597, 539);
-            this.tabPageRelatorio.TabIndex = 3;
-            this.tabPageRelatorio.Text = "Relatório";
-            this.tabPageRelatorio.UseVisualStyleBackColor = true;
-            // 
-            // groupBoxAjuda
-            // 
-            this.groupBoxAjuda.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBoxAjuda.Controls.Add(this.tabControlAssistencia);
-            this.groupBoxAjuda.Location = new System.Drawing.Point(3, 3);
-            this.groupBoxAjuda.Name = "groupBoxAjuda";
-            this.groupBoxAjuda.Size = new System.Drawing.Size(617, 590);
-            this.groupBoxAjuda.TabIndex = 15;
-            this.groupBoxAjuda.TabStop = false;
-            this.groupBoxAjuda.Text = "Ajuda";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(592, 549);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(28, 13);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "v0.1";
-            // 
-            // groupBoxAssistencia
-            // 
-            this.groupBoxAssistencia.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBoxAssistencia.Controls.Add(this.label34);
-            this.groupBoxAssistencia.Controls.Add(this.pictureBox4);
-            this.groupBoxAssistencia.Controls.Add(this.pictureBox3);
-            this.groupBoxAssistencia.Controls.Add(this.pictureBox2);
-            this.groupBoxAssistencia.Controls.Add(this.pictureBox1);
-            this.groupBoxAssistencia.Controls.Add(this.label33);
-            this.groupBoxAssistencia.Controls.Add(this.label31);
-            this.groupBoxAssistencia.Controls.Add(this.label32);
-            this.groupBoxAssistencia.Controls.Add(this.label30);
-            this.groupBoxAssistencia.Controls.Add(this.label29);
-            this.groupBoxAssistencia.Controls.Add(this.label28);
-            this.groupBoxAssistencia.Controls.Add(this.label1);
-            this.groupBoxAssistencia.Location = new System.Drawing.Point(626, 3);
-            this.groupBoxAssistencia.Name = "groupBoxAssistencia";
-            this.groupBoxAssistencia.Size = new System.Drawing.Size(262, 590);
-            this.groupBoxAssistencia.TabIndex = 14;
-            this.groupBoxAssistencia.TabStop = false;
-            this.groupBoxAssistencia.Text = "Assistência Técnica";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(245, 34);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 16);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Venda";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(31, 66);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(518, 78);
-            this.label3.TabIndex = 1;
-            this.label3.Text = resources.GetString("label3.Text");
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(31, 153);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(518, 78);
-            this.label4.TabIndex = 2;
-            this.label4.Text = resources.GetString("label4.Text");
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(31, 240);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(518, 78);
-            this.label5.TabIndex = 3;
-            this.label5.Text = resources.GetString("label5.Text");
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(31, 328);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(518, 78);
-            this.label6.TabIndex = 4;
-            this.label6.Text = resources.GetString("label6.Text");
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(31, 414);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(518, 78);
-            this.label7.TabIndex = 5;
-            this.label7.Text = resources.GetString("label7.Text");
             // 
             // label8
             // 
@@ -385,6 +271,21 @@
             this.label13.TabIndex = 6;
             this.label13.Text = "Produto";
             // 
+            // tabPageCliente
+            // 
+            this.tabPageCliente.Controls.Add(this.label14);
+            this.tabPageCliente.Controls.Add(this.label15);
+            this.tabPageCliente.Controls.Add(this.label16);
+            this.tabPageCliente.Controls.Add(this.label17);
+            this.tabPageCliente.Controls.Add(this.label18);
+            this.tabPageCliente.Controls.Add(this.label19);
+            this.tabPageCliente.Location = new System.Drawing.Point(4, 22);
+            this.tabPageCliente.Name = "tabPageCliente";
+            this.tabPageCliente.Size = new System.Drawing.Size(597, 539);
+            this.tabPageCliente.TabIndex = 1;
+            this.tabPageCliente.Text = "Cliente";
+            this.tabPageCliente.UseVisualStyleBackColor = true;
+            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -439,6 +340,21 @@
             this.label19.Size = new System.Drawing.Size(56, 16);
             this.label19.TabIndex = 6;
             this.label19.Text = "Cliente";
+            // 
+            // tabPageRelatorio
+            // 
+            this.tabPageRelatorio.Controls.Add(this.label20);
+            this.tabPageRelatorio.Controls.Add(this.label21);
+            this.tabPageRelatorio.Controls.Add(this.label22);
+            this.tabPageRelatorio.Controls.Add(this.label23);
+            this.tabPageRelatorio.Controls.Add(this.label24);
+            this.tabPageRelatorio.Controls.Add(this.label25);
+            this.tabPageRelatorio.Location = new System.Drawing.Point(4, 22);
+            this.tabPageRelatorio.Name = "tabPageRelatorio";
+            this.tabPageRelatorio.Size = new System.Drawing.Size(597, 539);
+            this.tabPageRelatorio.TabIndex = 3;
+            this.tabPageRelatorio.Text = "Relatório";
+            this.tabPageRelatorio.UseVisualStyleBackColor = true;
             // 
             // label20
             // 
@@ -495,33 +411,115 @@
             this.label25.TabIndex = 6;
             this.label25.Text = "Relatório";
             // 
-            // label28
+            // groupBoxAjuda
             // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(78, 112);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(100, 13);
-            this.label28.TabIndex = 17;
-            this.label28.Text = "(47) 0800-555-9999";
+            this.groupBoxAjuda.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxAjuda.Controls.Add(this.tabControlAssistencia);
+            this.groupBoxAjuda.Location = new System.Drawing.Point(3, 3);
+            this.groupBoxAjuda.Name = "groupBoxAjuda";
+            this.groupBoxAjuda.Size = new System.Drawing.Size(617, 590);
+            this.groupBoxAjuda.TabIndex = 15;
+            this.groupBoxAjuda.TabStop = false;
+            this.groupBoxAjuda.Text = "Ajuda";
             // 
-            // label29
+            // label1
             // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(85, 80);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(78, 16);
-            this.label29.TabIndex = 18;
-            this.label29.Text = "Telefones";
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(592, 549);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(28, 13);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "v0.1";
             // 
-            // label30
+            // groupBoxAssistencia
             // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(78, 129);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(100, 13);
-            this.label30.TabIndex = 19;
-            this.label30.Text = "(47) 0800-555-9999";
+            this.groupBoxAssistencia.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxAssistencia.Controls.Add(this.label34);
+            this.groupBoxAssistencia.Controls.Add(this.pictureBox4);
+            this.groupBoxAssistencia.Controls.Add(this.pictureBox3);
+            this.groupBoxAssistencia.Controls.Add(this.pictureBox2);
+            this.groupBoxAssistencia.Controls.Add(this.pictureBox1);
+            this.groupBoxAssistencia.Controls.Add(this.label33);
+            this.groupBoxAssistencia.Controls.Add(this.label31);
+            this.groupBoxAssistencia.Controls.Add(this.label32);
+            this.groupBoxAssistencia.Controls.Add(this.label30);
+            this.groupBoxAssistencia.Controls.Add(this.label29);
+            this.groupBoxAssistencia.Controls.Add(this.label28);
+            this.groupBoxAssistencia.Controls.Add(this.label1);
+            this.groupBoxAssistencia.Location = new System.Drawing.Point(626, 3);
+            this.groupBoxAssistencia.Name = "groupBoxAssistencia";
+            this.groupBoxAssistencia.Size = new System.Drawing.Size(262, 590);
+            this.groupBoxAssistencia.TabIndex = 14;
+            this.groupBoxAssistencia.TabStop = false;
+            this.groupBoxAssistencia.Text = "Assistência Técnica";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(19, 387);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(228, 156);
+            this.label34.TabIndex = 27;
+            this.label34.Text = resources.GetString("label34.Text");
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox4.Location = new System.Drawing.Point(169, 269);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox4.TabIndex = 26;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Location = new System.Drawing.Point(127, 269);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox3.TabIndex = 25;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Location = new System.Drawing.Point(85, 269);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox2.TabIndex = 24;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Location = new System.Drawing.Point(43, 269);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox1.TabIndex = 23;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(72, 231);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(108, 16);
+            this.label33.TabIndex = 22;
+            this.label33.Text = "Redes sociais";
             // 
             // label31
             // 
@@ -541,86 +539,88 @@
             this.label32.TabIndex = 20;
             this.label32.Text = "(47) 0800-555-9999";
             // 
-            // label33
+            // label30
             // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(72, 231);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(108, 16);
-            this.label33.TabIndex = 22;
-            this.label33.Text = "Redes sociais";
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(78, 129);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(100, 13);
+            this.label30.TabIndex = 19;
+            this.label30.Text = "(47) 0800-555-9999";
             // 
-            // pictureBox1
+            // label29
             // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Location = new System.Drawing.Point(43, 269);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(36, 36);
-            this.pictureBox1.TabIndex = 23;
-            this.pictureBox1.TabStop = false;
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(85, 80);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(78, 16);
+            this.label29.TabIndex = 18;
+            this.label29.Text = "Telefones";
             // 
-            // pictureBox2
+            // label28
             // 
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Location = new System.Drawing.Point(85, 269);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(36, 36);
-            this.pictureBox2.TabIndex = 24;
-            this.pictureBox2.TabStop = false;
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(78, 112);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(100, 13);
+            this.label28.TabIndex = 17;
+            this.label28.Text = "(47) 0800-555-9999";
             // 
-            // pictureBox3
+            // label7
             // 
-            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Location = new System.Drawing.Point(127, 269);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(36, 36);
-            this.pictureBox3.TabIndex = 25;
-            this.pictureBox3.TabStop = false;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(39, 420);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(518, 78);
+            this.label7.TabIndex = 11;
+            this.label7.Text = resources.GetString("label7.Text");
             // 
-            // pictureBox4
+            // label6
             // 
-            this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox4.Location = new System.Drawing.Point(169, 269);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(36, 36);
-            this.pictureBox4.TabIndex = 26;
-            this.pictureBox4.TabStop = false;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(39, 334);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(518, 78);
+            this.label6.TabIndex = 10;
+            this.label6.Text = resources.GetString("label6.Text");
             // 
-            // label34
+            // label5
             // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(19, 387);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(228, 156);
-            this.label34.TabIndex = 27;
-            this.label34.Text = resources.GetString("label34.Text");
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(39, 246);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(518, 78);
+            this.label5.TabIndex = 9;
+            this.label5.Text = resources.GetString("label5.Text");
             // 
-            // label26
+            // label4
             // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(19, 163);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(228, 156);
-            this.label26.TabIndex = 28;
-            this.label26.Text = resources.GetString("label26.Text");
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(39, 159);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(518, 78);
+            this.label4.TabIndex = 8;
+            this.label4.Text = resources.GetString("label4.Text");
             // 
-            // label27
+            // label3
             // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(19, 324);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(228, 156);
-            this.label27.TabIndex = 29;
-            this.label27.Text = resources.GetString("label27.Text");
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(39, 72);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(518, 78);
+            this.label3.TabIndex = 7;
+            this.label3.Text = resources.GetString("label3.Text");
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(253, 40);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 16);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Venda";
             // 
             // HelpUC
             // 
@@ -648,10 +648,10 @@
             this.groupBoxAjuda.ResumeLayout(false);
             this.groupBoxAssistencia.ResumeLayout(false);
             this.groupBoxAssistencia.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -670,12 +670,6 @@
         private System.Windows.Forms.GroupBox groupBoxAssistencia;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.PictureBox pictureBoxLogoNome;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
@@ -707,5 +701,11 @@
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }

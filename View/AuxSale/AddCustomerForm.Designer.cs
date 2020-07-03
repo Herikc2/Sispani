@@ -1,4 +1,4 @@
-﻿namespace Sispani.View
+﻿namespace Sispani.View.AuxSale
 {
     partial class AddCustomerForm
     {
@@ -38,7 +38,7 @@
             // 
             // txtCpfT
             // 
-            this.txtCpfT.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtCpfT.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCpfT.Location = new System.Drawing.Point(12, 70);
             this.txtCpfT.MaxLength = 14;
@@ -59,7 +59,7 @@
             // 
             // txtNameT
             // 
-            this.txtNameT.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtNameT.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNameT.Enabled = false;
             this.txtNameT.Location = new System.Drawing.Point(12, 25);

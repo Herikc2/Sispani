@@ -1,4 +1,4 @@
-﻿using Sispani.Model;
+﻿using Sispani.Model.DAO;
 using System;
 using System.Windows;
 using System.Windows.Forms;

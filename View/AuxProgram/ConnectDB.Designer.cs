@@ -160,7 +160,7 @@
             this.btnConfirm.TabIndex = 15;
             this.btnConfirm.Text = "Cadastrar Banco de Dados";
             this.btnConfirm.UseVisualStyleBackColor = false;
-            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
+            this.btnConfirm.Click += new System.EventHandler(this.Confirm_Click);
             // 
             // ConnectDB
             // 
