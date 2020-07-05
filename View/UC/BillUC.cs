@@ -75,7 +75,6 @@ namespace Sispani.View.UC
         private void BtnCancel_Click(object sender, EventArgs e)
         {          
             Clear();
-            txtCPF.Enabled = true;
             DataTable source = new DataTable();
             dataGridView.DataSource = source;
         }
@@ -86,6 +85,7 @@ namespace Sispani.View.UC
                 "Pagamento cancelado",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Exclamation);
+            Clear();
         }
 
         public void FinalizePayment(string money, string card)
@@ -103,7 +103,10 @@ namespace Sispani.View.UC
         {
             txtName.Text = "";
             txtCPF.Text = "";
-            // limpar dt
+            txtCPF.Enabled = true;
+            btnCancel.Enabled = false;
+            btnPay.Enabled = false;
+            dataGridView.DataSource = null;
         }
     }
 }

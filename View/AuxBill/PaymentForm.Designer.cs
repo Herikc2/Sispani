@@ -82,6 +82,7 @@
             this.btnCancel.TabIndex = 21;
             this.btnCancel.Text = "Cancelar";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // lblTotal
             // 
@@ -107,6 +108,7 @@
             this.btnFinalize.TabIndex = 20;
             this.btnFinalize.Text = "Finalizar";
             this.btnFinalize.UseVisualStyleBackColor = false;
+            this.btnFinalize.Click += new System.EventHandler(this.BtnFinalize_Click);
             // 
             // groupBoxTipo
             // 
@@ -147,6 +149,7 @@
             this.txtPayValue.Name = "txtPayValue";
             this.txtPayValue.Size = new System.Drawing.Size(100, 20);
             this.txtPayValue.TabIndex = 3;
+            this.txtPayValue.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtPayValue_KeyDown);
             // 
             // groupBoxFormasPagamento
             // 
@@ -213,6 +216,7 @@
             this.btnCard.TabIndex = 1;
             this.btnCard.Text = "Cartão";
             this.btnCard.UseVisualStyleBackColor = false;
+            this.btnCard.Click += new System.EventHandler(this.BtnCard_Click);
             // 
             // btnMoney
             // 
@@ -227,6 +231,7 @@
             this.btnMoney.TabIndex = 0;
             this.btnMoney.Text = "Dinheiro";
             this.btnMoney.UseVisualStyleBackColor = false;
+            this.btnMoney.Click += new System.EventHandler(this.BtnMoney_Click);
             // 
             // PaymentForm
             // 
