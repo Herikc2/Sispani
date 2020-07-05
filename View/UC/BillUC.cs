@@ -58,7 +58,7 @@ namespace Sispani.View.UC
                 }
                 else
                 {
-                    MessageBox.Show("O CPF informado não foi encontrado.",
+                    MessageBox.Show("O CPF informado não foi encontrado ou não possui conta.",
                                     "Não encontrado",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Exclamation);
@@ -73,8 +73,11 @@ namespace Sispani.View.UC
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)
-        {
+        {          
             Clear();
+            txtCPF.Enabled = true;
+            DataTable source = new DataTable();
+            dataGridView.DataSource = source;
         }
 
         public void FinalizePayment()

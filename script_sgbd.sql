@@ -613,7 +613,14 @@ BEGIN
 	
 	FOR dados_item_conta_cliente in select p.nome, p.cpf, v.data, ic.total_prazo
 	from item_conta ic, conta c, pessoa p, venda v
-	where c.id = id_conta and c.cliente_pessoa_cpf = p.cpf and ic.conta_id is not null and v.id = ic.venda_id order by v.data LOOP
+	where 
+	c.id = id_conta and
+	c.cliente_pessoa_cpf = cpf_ and
+	p.cpf = cpf_ and 
+	ic.conta_id is not null and
+	v.id = ic.venda_id and 
+	ic.conta_id = id_conta
+	order by v.data LOOP
 		return next dados_item_conta_cliente;
 	END LOOP;
 END;
