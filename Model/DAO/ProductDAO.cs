@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Globalization;
 
 namespace Sispani.Model.DAO
 {
@@ -65,7 +66,8 @@ namespace Sispani.Model.DAO
             else
             {
                 string cmd = string.Format("select * from inserir_produto('{0}','{1}','{2}','{3}','{4}','{5}')",
-                        product.Code, product.Name, product.Amount, product.Unity, product.CostPrice, product.SalePrice);
+                        product.Code, product.Name, product.Amount, product.Unity, product.CostPrice.ToString("N", CultureInfo.CreateSpecificCulture("en-US")),
+                        product.SalePrice.ToString("N", CultureInfo.CreateSpecificCulture("en-US")));
                 return GenericDAO.genericBool(cmd);
             }
         }
@@ -77,7 +79,8 @@ namespace Sispani.Model.DAO
             else
             {
                 string cmd = string.Format("select * from alterar_produto('{0}','{1}','{2}','{3}','{4}','{5}')",
-                        product.Code, product.Name, product.Amount, product.Unity, product.CostPrice, product.SalePrice);
+                        product.Code, product.Name, product.Amount, product.Unity, product.CostPrice.ToString("N", CultureInfo.CreateSpecificCulture("en-US"))
+                        , product.SalePrice.ToString("N", CultureInfo.CreateSpecificCulture("en-US")));
                 return GenericDAO.genericBool(cmd);
             }
         }

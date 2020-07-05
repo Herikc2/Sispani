@@ -101,6 +101,7 @@ namespace Sispani.View.UC
 
         private void Clear()
         {
+            lblTotal.Text = "";
             txtName.Text = "";
             txtCPF.Text = "";
             txtCPF.Enabled = true;
