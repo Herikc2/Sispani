@@ -1,5 +1,6 @@
 ﻿using Sispani.Model.Util.Validations;
 using System.Collections.Generic;
+using System.Globalization;
 
 namespace Sispani.Model.DAO
 {
@@ -12,7 +13,9 @@ namespace Sispani.Model.DAO
             else
             {
                 string cmd = string.Format("select * from inserir_pagamento_conta('{0}','{1}','{2}','{3}')",
-                        billPayment.Customer.CPF, billPayment.PaymentDate, billPayment.Money, billPayment.Card);
+                        billPayment.Customer.CPF, billPayment.PaymentDate,
+                        billPayment.Money.ToString("N", CultureInfo.CreateSpecificCulture("en-US")),
+                        billPayment.Card.ToString("N", CultureInfo.CreateSpecificCulture("en-US")));
                 return GenericDAO.genericBool(cmd);
             }
         }
@@ -23,7 +26,7 @@ namespace Sispani.Model.DAO
 
             inputs.Add(new ValidationItem(billPayment.Customer.CPF, "CPF"));
             inputs.Add(new ValidationItem(billPayment.Customer.Name, "Nome"));
-            inputs.Add(new ValidationItem(billPayment.Customer.RG, "RG"));
+            /*inputs.Add(new ValidationItem(billPayment.Customer.RG, "RG"));
             inputs.Add(new ValidationItem(billPayment.Customer.Gender, "Sexo"));
             inputs.Add(new ValidationItem(billPayment.Customer.Birthday.ToString(), "Data de Nascimento"));
             inputs.Add(new ValidationItem(billPayment.Customer.CellPhone, "Celular"));
@@ -34,7 +37,7 @@ namespace Sispani.Model.DAO
             inputs.Add(new ValidationItem(billPayment.Customer.Address.Complement, "Complemento"));
             inputs.Add(new ValidationItem(billPayment.Customer.Address.District, "Bairro"));
             inputs.Add(new ValidationItem(billPayment.Customer.Address.City, "Cidade"));
-            inputs.Add(new ValidationItem(billPayment.Customer.Address.State, "Estado"));
+            inputs.Add(new ValidationItem(billPayment.Customer.Address.State, "Estado"));*/
 
             inputs.Add(new ValidationItem(billPayment.PaymentDate.ToString(), "Data de Pagamento"));
 
